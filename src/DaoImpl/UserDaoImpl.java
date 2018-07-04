@@ -2,6 +2,7 @@ package DaoImpl;
 
 import Base.BaseDaoImpl;
 import org.hibernate.query.Query;
+import org.json.JSONObject;
 import table.UserEntity;
 import utils.HibernateUtils;
 
@@ -49,4 +50,7 @@ public class UserDaoImpl extends BaseDaoImpl<UserEntity> {
 
         return user;
     }
+
+
+
 }

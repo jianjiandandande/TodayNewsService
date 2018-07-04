@@ -28,17 +28,6 @@ public abstract class BaseDaoImpl<T>  implements BaseDao<T>{
                 applySettings(cfg.getProperties()).build();
     }
 
-    public void init() {
-        sf = cfg.buildSessionFactory(sr);
-        se = sf.openSession();
-        ts = se.beginTransaction();
-    }
-
-    public void destory() {
-        ts.commit();
-        se.close();
-        sf.close();
-    }
 
     @Override
     public void insert(T t) {

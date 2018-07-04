@@ -2,6 +2,7 @@ package Base;
 
 import net.sf.json.JSONArray;
 import org.apache.struts2.ServletActionContext;
+import org.json.JSONObject;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,13 +12,13 @@ import java.util.List;
 /**
  * Created by Vincent on 2018/7/3.
  */
-public abstract class BaseServiceImpl<T> implements BaseServices<T>{
+public abstract class BaseServiceImpl<T> implements BaseServices<T> {
 
     public HttpServletRequest mRequest;
 
     public HttpServletResponse mResponse;
 
-    private void init(){
+    private void init() {
         mRequest = ServletActionContext.getRequest();
         mResponse = ServletActionContext.getResponse();
 
@@ -25,7 +26,7 @@ public abstract class BaseServiceImpl<T> implements BaseServices<T>{
         mResponse.setCharacterEncoding("UTF-8");
     }
 
-    public void requestAndResponse(JSONArray jsonArray){
+    public void requestAndResponse(JSONArray jsonArray) {
         init();
         try {
             byte[] jsonBytes = jsonArray.toString().getBytes("utf-8");
@@ -43,4 +44,5 @@ public abstract class BaseServiceImpl<T> implements BaseServices<T>{
     public T update(T t) {
         return null;
     }
+
 }

@@ -84,4 +84,26 @@ public class UserService extends BaseServiceImpl<UserEntity> {
 
         return json;
     }
+
+    public  JSONObject getUserInfo(String username){
+
+        JSONObject json = new JSONObject();
+
+        UserEntity user = queryByUserName(username);
+
+        if (user!=null) {
+            json.put("username", user.getUsername());
+            json.put("telephone", user.getTelephone());
+            json.put("user_icon", user.getUserIcon());
+
+            json.put("code", 502);
+            json.put("msg", "获取用户信息成功");
+        }else {
+            json.put("code", 403);
+            json.put("msg", "获取用户信息失败");
+        }
+
+        return json;
+
+    }
 }

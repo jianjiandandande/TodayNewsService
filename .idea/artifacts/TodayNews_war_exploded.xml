@@ -15,6 +15,7 @@
           <element id="library" level="project" name="struts2-json-plugin-2.5.13" />
           <element id="library" level="project" name="org.json:json:20140107" />
           <element id="library" level="project" name="json-lib-2.3-jdk15" />
+          <element id="library" level="project" name="commons-beanutils-1.9.2" />
         </element>
       </element>
     </root>

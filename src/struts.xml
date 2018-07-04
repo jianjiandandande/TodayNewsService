@@ -12,9 +12,11 @@
 
         <action name="login" class="actions.LoginAction" method="login"/>
         <action name="register" class="actions.RegisterAction" method="register"/>
-        <!--<action name="userInfo" class="actions.GetUserInfoAction" method="getUserInfo"/>-->
-        <!--<action name="addHistory" class="actions.AddHistoryAction" method="addHistory"/>-->
-        <!--<action name="queryHistory" class="actions.QueryHistory" method="queryHistory"/>-->
+        <action name="userInfo" class="actions.GetUserInfoAction" method="getUserInfo"/>
+        <action name="addHistory" class="actions.AddHistoryAction" method="addHistory"/>
+        <action name="queryHistory" class="actions.QueryHistoryAction" method="queryHistory"/>
+        <action name="addCollection" class="actions.AddCollectionAction" method="addCollection"/>
+        <action name="queryCollection" class="actions.QueryCollectionAction" method="queryCollection"/>
 
     </package>
 

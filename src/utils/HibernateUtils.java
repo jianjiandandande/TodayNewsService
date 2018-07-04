@@ -5,9 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /** 
- * @author GuangSIR 
- * @date 2018年3月21日 下午8:22:26 
- * @version 1.0 
+ * Created by Vincent on 2018/7/3.
  */
 public class HibernateUtils {
 
