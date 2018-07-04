@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <action name="login" class="actions.LoginAction" method="login"/>
+        <action name="register" class="actions.RegisterAction" method="register"/>
+        <!--<action name="userInfo" class="actions.GetUserInfoAction" method="getUserInfo"/>-->
+        <!--<action name="addHistory" class="actions.AddHistoryAction" method="addHistory"/>-->
+        <!--<action name="queryHistory" class="actions.QueryHistory" method="queryHistory"/>-->
+
+    </package>
+
+</struts>
