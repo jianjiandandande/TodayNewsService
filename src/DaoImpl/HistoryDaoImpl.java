@@ -34,8 +34,16 @@ public class HistoryDaoImpl extends BaseDaoImpl<HistoryEntity> {
 
     @Override
     public void delete(int userId, String id) {
+
         HistoryEntity history = draw(userId,id);
+        if (history==null){
+            return;
+        }
+        se = HibernateUtils.openSession();
+        ts = se.beginTransaction();
         se.delete(history);
+        ts.commit();
+        se.close();
     }
 
     @Override

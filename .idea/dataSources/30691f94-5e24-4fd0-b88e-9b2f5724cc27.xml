@@ -918,202 +918,233 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="232" parent="8" name="collection">
+    <table id="232" parent="8" name="attention">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="233" parent="8" name="history">
+    <table id="233" parent="8" name="collection">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="234" parent="8" name="user">
+    <table id="234" parent="8" name="history">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="235" parent="232" name="userId">
+    <table id="235" parent="8" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="236" parent="232" name="userId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="236" parent="232" name="id">
-      <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="237" parent="232" name="uid">
+      <Position>2</Position>
+      <DataType>varchar(145)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="238" parent="232" name="icon_url">
       <Position>3</Position>
-      <DataType>varchar(45)|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(350)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="232" name="content">
+    <column id="239" parent="232" name="uname">
       <Position>4</Position>
-      <DataType>varchar(2000)|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(450)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="232" name="imageUrl">
-      <Position>5</Position>
-      <DataType>varchar(150)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="240" parent="232" name="model">
-      <Position>6</Position>
-      <DataType>varchar(45)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="241" parent="232" name="videoUrl">
-      <Position>7</Position>
-      <DataType>varchar(150)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="242" parent="232" name="author">
-      <Position>8</Position>
-      <DataType>varchar(150)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="243" parent="232" name="skim_count">
-      <Position>9</Position>
-      <DataType>varchar(45)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="244" parent="232" name="love_count">
-      <Position>10</Position>
-      <DataType>varchar(45)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="245" parent="232" name="title">
-      <Position>11</Position>
-      <DataType>varchar(100)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="246" parent="232" name="commentCount">
-      <Position>12</Position>
-      <DataType>varchar(45)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="247" parent="232" name="PRIMARY">
+    <key id="240" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userId
-id</ColNames>
+uid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="248" parent="233" name="userId">
+    <column id="241" parent="233" name="userId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="233" name="id">
+    <column id="242" parent="233" name="id">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="233" name="uid">
+    <column id="243" parent="233" name="uid">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="233" name="content">
+    <column id="244" parent="233" name="content">
       <Position>4</Position>
       <DataType>varchar(2000)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="233" name="imageUrl">
+    <column id="245" parent="233" name="imageUrl">
       <Position>5</Position>
       <DataType>varchar(150)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="233" name="model">
+    <column id="246" parent="233" name="model">
       <Position>6</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="233" name="videoUrl">
+    <column id="247" parent="233" name="videoUrl">
       <Position>7</Position>
       <DataType>varchar(150)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="233" name="author">
+    <column id="248" parent="233" name="author">
       <Position>8</Position>
       <DataType>varchar(150)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="233" name="skim_count">
+    <column id="249" parent="233" name="skim_count">
       <Position>9</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="233" name="love_count">
+    <column id="250" parent="233" name="love_count">
       <Position>10</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="233" name="title">
+    <column id="251" parent="233" name="title">
       <Position>11</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="233" name="commentCount">
+    <column id="252" parent="233" name="commentCount">
       <Position>12</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="260" parent="233" name="PRIMARY">
+    <key id="253" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userId
 id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="261" parent="234" name="user_id">
+    <column id="254" parent="234" name="userId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="234" name="id">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="234" name="uid">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="257" parent="234" name="content">
+      <Position>4</Position>
+      <DataType>varchar(2000)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="258" parent="234" name="imageUrl">
+      <Position>5</Position>
+      <DataType>varchar(300)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="234" name="model">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="234" name="videoUrl">
+      <Position>7</Position>
+      <DataType>varchar(300)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="261" parent="234" name="author">
+      <Position>8</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="234" name="skim_count">
+      <Position>9</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="263" parent="234" name="love_count">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="234" name="title">
+      <Position>11</Position>
+      <DataType>varchar(100)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="234" name="commentCount">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="266" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>userId
+id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="267" parent="235" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="234" name="username">
+    <column id="268" parent="235" name="username">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="234" name="password">
+    <column id="269" parent="235" name="password">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="234" name="telephone">
+    <column id="270" parent="235" name="telephone">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="234" name="user_icon">
+    <column id="271" parent="235" name="user_icon">
       <Position>5</Position>
       <DataType>varchar(150)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="266" parent="234" name="username_UNIQUE">
+    <index id="272" parent="235" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="267" parent="234" name="PRIMARY">
+    <key id="273" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="268" parent="234" name="username_UNIQUE">
+    <key id="274" parent="235" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username_UNIQUE</UnderlyingIndexName>
     </key>

@@ -86,4 +86,21 @@ public class CollectionService extends BaseServiceImpl<CollectionEntity> {
         JSONArray array = getAllCollection(userId);
         return array;
     }
+
+    public JSONObject deleteCollection(int userId,String id){
+
+        CollectionEntity collectionEntity = selectT(userId,id);
+        JSONObject json = new JSONObject();
+        if (collectionEntity!=null) {
+
+            delete(userId,id);
+            json.put("code", 505);
+            json.put("msg", "删除收藏成功");
+
+        }else {
+            json.put("code", 404);
+            json.put("msg", "删除收藏失败");
+        }
+        return json;
+    }
 }

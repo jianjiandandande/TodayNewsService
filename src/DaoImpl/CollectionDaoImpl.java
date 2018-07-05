@@ -3,6 +3,7 @@ package DaoImpl;
 import Base.BaseDaoImpl;
 import org.hibernate.query.Query;
 import table.CollectionEntity;
+import table.HistoryEntity;
 import utils.HibernateUtils;
 
 import java.util.ArrayList;
@@ -34,13 +35,19 @@ public class CollectionDaoImpl extends BaseDaoImpl<CollectionEntity> {
     @Override
     public void delete(int userId, String id) {
         CollectionEntity collection = draw(userId,id);
+        if (collection==null){
+            return;
+        }
+        se = HibernateUtils.openSession();
+        ts = se.beginTransaction();
         se.delete(collection);
+        ts.commit();
+        se.close();
     }
 
     @Override
     public CollectionEntity selectT(int userId, String id) {
         CollectionEntity collection = draw(userId,id);
-
         return collection;
     }
 

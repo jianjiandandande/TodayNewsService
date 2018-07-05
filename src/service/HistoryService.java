@@ -4,6 +4,7 @@ import Base.BaseServiceImpl;
 import DaoImpl.HistoryDaoImpl;
 import net.sf.json.JSONArray;
 import org.json.JSONObject;
+import table.CollectionEntity;
 import table.HistoryEntity;
 import table.UserEntity;
 
@@ -98,5 +99,22 @@ public class HistoryService extends BaseServiceImpl<HistoryEntity> {
 
         JSONArray array = getAllHistory(userId);
         return array;
+    }
+
+    public JSONObject deleteHistory(int userId,String id){
+
+        HistoryEntity historyEntity = selectT(userId,id);
+        JSONObject json = new JSONObject();
+        if (historyEntity!=null) {
+
+            delete(userId,id);
+            json.put("code", 506);
+            json.put("msg", "删除历史成功");
+
+        }else {
+            json.put("code", 405);
+            json.put("msg", "删除历史失败");
+        }
+        return json;
     }
 }

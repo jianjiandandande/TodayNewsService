@@ -17,6 +17,11 @@
         <action name="queryHistory" class="actions.QueryHistoryAction" method="queryHistory"/>
         <action name="addCollection" class="actions.AddCollectionAction" method="addCollection"/>
         <action name="queryCollection" class="actions.QueryCollectionAction" method="queryCollection"/>
+        <action name="deleteHistory" class="actions.DeleteHistoryAction" method="deleteHistory"/>
+        <action name="deleteCollection" class="actions.DeleteCollectionAction" method="deleteCollection"/>
+        <action name="addAttention" class="actions.AddAttentionAction" method="addAttention"/>
+        <action name="deleteAttention" class="actions.DeleteAttentionAction" method="deleteAttention"/>
+        <action name="queryAttention" class="actions.QueryAttentionAction" method="queryAttention"/>
 
     </package>
 

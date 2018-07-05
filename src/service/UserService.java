@@ -92,6 +92,7 @@ public class UserService extends BaseServiceImpl<UserEntity> {
         UserEntity user = queryByUserName(username);
 
         if (user!=null) {
+            json.put("userId",user.getUserId());
             json.put("username", user.getUsername());
             json.put("telephone", user.getTelephone());
             json.put("user_icon", user.getUserIcon());

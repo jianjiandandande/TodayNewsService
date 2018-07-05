@@ -17,6 +17,7 @@
         <mapping class="table.UserEntity"/>
         <mapping class="table.CollectionEntity"/>
         <mapping class="table.HistoryEntity"/>
+        <mapping class="table.AttentionEntity"/>
 
     </session-factory>
 
